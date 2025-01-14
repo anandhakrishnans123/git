@@ -13,6 +13,7 @@ import time
 import pdfplumber
 import os
 import subprocess
+import sys  # Ensure sys is imported
 
 # Check if playwright is installed and install it if necessary
 try:
@@ -22,6 +23,7 @@ except ImportError:
 
 # Install Playwright binaries
 subprocess.run([sys.executable, "-m", "playwright", "install"])
+
 
 st.title("PDF & Image Extraction")
 
