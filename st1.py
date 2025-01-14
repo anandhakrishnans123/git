@@ -11,6 +11,18 @@ import asyncio
 from playwright.async_api import async_playwright
 import time
 import pdfplumber
+import os
+import subprocess
+
+# Check if playwright is installed and install it if necessary
+try:
+    import playwright
+except ImportError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "playwright"])
+
+# Install Playwright binaries
+subprocess.run([sys.executable, "-m", "playwright", "install"])
+
 st.title("PDF & Image Extraction")
 
  
