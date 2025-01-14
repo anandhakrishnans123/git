@@ -163,7 +163,7 @@ Ensure each field is placed in a separate column with appropriate headers. Retur
                     async def main():
                         async with async_playwright() as p:
                             # Launch the browser with visibility
-                            browser = await p.chromium.launch(headless=True)  # This will open the browser so you can see what's happening
+                            browser = await p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-software-rasterizer"])  # This will open the browser so you can see what's happening
                             page = await browser.new_page()
                            
                             # Clear cookies before starting
@@ -355,7 +355,7 @@ Ensure each field is placed in a separate column with appropriate headers. Retur
                     async def main():
                         async with async_playwright() as p:
                             # Launch the browser with visibility
-                            browser = await p.chromium.launch(headless=True)  # This will open the browser so you can see what's happening
+                            browser = await p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-software-rasterizer"])  # This will open the browser so you can see what's happening
                             page = await browser.new_page()
                            
                             # Clear cookies before starting
