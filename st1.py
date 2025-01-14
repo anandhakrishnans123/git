@@ -230,11 +230,7 @@ Ensure each field is placed in a separate column with appropriate headers. Retur
                             return title
  
                     # Run the async function
-                    if __name__ == '__main__':
-                        loop = asyncio.ProactorEventLoop()
-                        asyncio.set_event_loop(loop)
-                        title = loop.run_until_complete(main())
-                        print(title)
+                    asyncio.run(main())
        
 #--------------------------------------------------------------------------------------------------------------------
                     # Download button for Excel
