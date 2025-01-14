@@ -6,3 +6,4 @@ pandas
 asyncio
 playwright
 pdfplumber
+openpyxl
